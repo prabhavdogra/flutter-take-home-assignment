@@ -5,6 +5,8 @@ void main() => runApp(const MaterialApp(
       home: OnboardingScreen(),
     ));
 
+Color primaryColor = const Color(0xff4552CB);
+
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
   @override
@@ -34,8 +36,8 @@ class OnboardingScreen extends StatelessWidget {
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
                           colors: <Color>[
-                            Color.fromARGB(0, 255, 255, 255),
-                            Color.fromARGB(255, 255, 255, 255),
+                            Colors.transparent,
+                            Colors.white,
                           ],
                         ),
                       ),
@@ -57,7 +59,7 @@ class OnboardingScreen extends StatelessWidget {
                       child: TextButton(
                         style: ElevatedButton.styleFrom(
                           minimumSize: const Size.fromHeight(46),
-                          backgroundColor: const Color(0xff4552CB),
+                          backgroundColor: primaryColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(25),
                           ),
@@ -87,8 +89,8 @@ class OnboardingScreen extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           minimumSize: const Size.fromHeight(46),
                           shape: RoundedRectangleBorder(
-                            side: const BorderSide(
-                              color: Color(0xFF4552CB),
+                            side: BorderSide(
+                              color: primaryColor,
                               width: 2,
                             ),
                             borderRadius: BorderRadius.circular(25),
@@ -99,7 +101,7 @@ class OnboardingScreen extends StatelessWidget {
                           'Log In',
                           style: GoogleFonts.encodeSans(
                             fontWeight: FontWeight.bold,
-                            color: const Color(0xFF4552CB),
+                            color: primaryColor,
                             fontSize: 16,
                           ),
                         ),
